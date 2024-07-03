@@ -86,6 +86,10 @@ ninja -C build
 
 1. All plugins now work on layer groups in GIMP 2.99.19 including GEGL Effects
 2. GEGL Effects now has a checkbox on its color picker
+
+### GEGL Effects is the only repo on my Github with a 2.99.19 branch
+
+https://github.com/LinuxBeaver/Gimp_Layer_Effects_Text_Styler_Plugin_GEGL_Effects/tree/Continual_299_19_crash_proof
    
 
 ### To explain the problem technically
