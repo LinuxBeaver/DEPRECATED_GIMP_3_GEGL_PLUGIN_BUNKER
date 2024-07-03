@@ -82,7 +82,7 @@ ninja -C build
 4. Glow Stick lost its ability to call gegl:bloom
 5. Sparkle lost its dropshadow and had its graph rewritten
 
-### however a few technical new features/upgrades happened
+### A few technical new features/upgrades happened
 
 1. All plugins now work on layer groups in GIMP 2.99.19 including GEGL Effects
 2. GEGL Effects now has a checkbox on its color picker
