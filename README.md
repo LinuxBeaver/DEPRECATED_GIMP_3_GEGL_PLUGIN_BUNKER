@@ -34,6 +34,7 @@ Location to put binaries
 then restart GIMP and go to GEGL operation to find the new plugins or if on 2.99.19 
 
 
+![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/fa1ef6ae-a4c8-40cf-a1bb-f585cf2ade3a)
 
 ## Compiling and Installing
 
@@ -51,7 +52,6 @@ ninja -C build
 
 ```
 
-![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/fa1ef6ae-a4c8-40cf-a1bb-f585cf2ade3a)
 
 ### Windows
 
