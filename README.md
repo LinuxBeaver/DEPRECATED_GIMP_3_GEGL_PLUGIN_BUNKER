@@ -53,10 +53,6 @@ ninja -C build
 
 ![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/fa1ef6ae-a4c8-40cf-a1bb-f585cf2ade3a)
 
-
-If you have an older version of gegl you may need to copy to `~/.local/share/gegl-0.3/plug-ins`
-instead (on Ubuntu 18.04 for example).
-
 ### Windows
 
 The easiest way to compile this project on Windows is by using msys2.  Download
