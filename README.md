@@ -1,6 +1,8 @@
-# 60 GEGL plugins of mine compatible with GIMP 2.99/3 
+# GIMP 3 has serious problems with many of my plugins - this is the safe repo for GIMP 2.99/GIMP 3 users
 
-Source code and Linux and Windows binaries avalible
+## 60 GEGL plugins of mine compatible with GIMP 2.99/3 
+
+Source code and Linux and Windows binaries avalible - please remove everything from /gegl-0.4/plug-ins before using them or you will experience a crash on closing GIMP 2.99/3.
 
 ![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/a8cf1f6d-3eb2-47bc-879e-44966ea6baa9)
 
@@ -67,3 +69,15 @@ Then build the same way you would on Linux:
 meson setup --buildtype=release build
 ninja -C build
 ```
+
+## This is a downgrade because GIMP 3 broke stuff that works in GIMP 2.10
+
+### Below is a list of what was lost
+
+1. Over 10 plugins were removed indefinitely because they break GIMP 2.99.19 (pie divider, spheres, cutout, frame, text style collection (which contains dozens of plugins in one place), wood texture, align, video dedegradtion mod, bokeh, gum balls are gone.   
+2. All plugins that use image uploads had their image upload ability removed
+3. GEGL Effects lost its gradient, shiny text and color blend mode picker
+4. Glow Stick lost its ability to call gegl:bloom
+5. Sparkle lost its dropshadow and had its graph rewritten
+
+# This will be permanent unless GIMP's team fixes things. Until further notice GIMP 2.99/3 userss should NOT use normal repos or the crash will happen. 
