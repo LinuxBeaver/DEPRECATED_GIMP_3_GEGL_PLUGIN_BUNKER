@@ -27,9 +27,6 @@ Location to put binaries
 
  /home/(USERNAME)/.local/share/gegl-0.4/plug-ins
 
- 
-![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/fa1ef6ae-a4c8-40cf-a1bb-f585cf2ade3a)
-
 **Linux (Flatpak includes Chromebook)**
 
  /home/(USERNAME)/.var/app/org.gimp.GIMP/data/gegl-0.4/plug-ins
