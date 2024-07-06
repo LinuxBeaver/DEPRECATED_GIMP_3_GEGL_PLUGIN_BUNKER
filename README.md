@@ -2,7 +2,10 @@
 
 ## 60 GEGL plugins of mine compatible with GIMP 2.99/3 
 
-Source code and Linux and Windows binaries avalible - please remove everything from /gegl-0.4/plug-ins before using them or you will experience a crash on closing GIMP 2.99/3.
+Source code and Linux and Windows binaries avalible - please remove everything from /gegl-0.4/plug-ins before using them or you will experience a crash on closing GIMP 2.99/3. 
+
+Download here
+https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/releases/tag/GIMP3_GEGL_plugins
 
 ![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/a8cf1f6d-3eb2-47bc-879e-44966ea6baa9)
 
@@ -37,7 +40,8 @@ then restart GIMP and go to GEGL operation to find the new plugins or if on 2.99
 
 ## Compiling and Installing
 
-You can run the build_everything_linux.sh/build_everything_windows.sh command or...
+You can run the build_plugin_name_linux/windows to easy compile. You even have an option to compile everything.
+Below is an explanation how to compile ultra manually; though it is highly recommended you use the bash script.
 
 ### Linux
 
@@ -80,6 +84,7 @@ ninja -C build
 3. GEGL Effects lost its gradient, shiny text and color blend mode picker
 4. Glow Stick lost its ability to call gegl:bloom
 5. Sparkle lost its dropshadow and had its graph rewritten
+6. Rock Text 2 had a domain smooth removed and replaced with mean-curvature-blur; a virtually unnoticable change but it had to happen because gegl:crop left.
 
 ### A few technical new features/upgrades happened
 
