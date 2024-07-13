@@ -12,9 +12,6 @@ https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/releases/tag/GIMP3_GEGL
 
 ![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/a8cf1f6d-3eb2-47bc-879e-44966ea6baa9)
 
-![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/bfa3aee1-3d7e-4ea5-856e-f03475302280)
-
-
 
 ### As of now GIMP 3 plugins are not compatible with GIMP 2.10 plugins (the normal repos)
 
