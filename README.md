@@ -104,13 +104,13 @@ GIMP 2.99.19/GIMP 3 RC1 is causing extreme problems with my normal plugin repos.
 
 1. gegl:crop (in use internally anywhere) 
 2. gegl:load (for uploading an image)
-3. int where double should be (or vice versa)
+3. **int** where **double** should be (or vice versa)
 4. Invalid parameters (ie emboss azimuth=361)
-5. Invalid meta tags (ie sensitive without a checkbox)
+5. Invalid meta tags (ie gegl sensitive without a checkbox)
 
-has the potential to crash GIMP 3 on closing a window or tab. THe goal is for GIMP's team to fix the problem and until GIMP's team fixes the problem this "GIMP 3 plugin bunker" is the only solution.  GIMP 2.10 and GIMP 3 plugins cannot co-exist anymore.  This is a special branch of all my plugins specifically meant for GIMP 2.99/GIMP 3 only. 
+has the potential to crash GIMP 3 on closing a window or tab. The longterm goal is for GIMP's team to fix the crash (not me) and until GIMP's team fixes the problem this "GIMP 3 plugin bunker" is the only solution.  GIMP 2.10 and GIMP 3 plugins cannot co-exist anymore.  This is a special branch of all my plugins specifically meant for GIMP 2.99/GIMP 3 only. 
 
-If you use GIMP 2.99.19/GIMP 3 and want to use my plugins everything you download should be here and you should never mix GIMP 2.10 and GIMP 3 plugins as if you do they will crash when closing a tab or GIMP.
+If you use GIMP 2.99.19/GIMP 3 and want to use my plugins everything you download should be here and you should not mix GIMP 2.10 plugins with these as if you do they will crash when closing a tab or GIMP.
 
 
-# This will be permanent unless GIMP's team fixes things. Until further notice GIMP 2.99/3 users should NOT use normal repos or the crash will happen. 
+# This bunker repo permanent solution for 2.99.18/GIMP 3 users unless GIMP's team fixes things. Until further notice GIMP 2.99/3 users should NOT use normal repos or the crash will happen. 
