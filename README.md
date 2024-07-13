@@ -7,6 +7,9 @@ Source code and Linux and Windows binaries avalible - please remove everything f
 Download here
 https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/releases/tag/GIMP3_GEGL_plugins
 
+![image](https://github.com/user-attachments/assets/767ab0d8-adb1-486e-b0fc-eca5502738c1)
+
+
 ![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/a8cf1f6d-3eb2-47bc-879e-44966ea6baa9)
 
 ![image](https://github.com/LinuxBeaver/GIMP_3_GEGL_PLUGIN_BUNKER/assets/78667207/bfa3aee1-3d7e-4ea5-856e-f03475302280)
