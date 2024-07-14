@@ -79,12 +79,13 @@ ninja -C build
 
 ### Below is a list of what was lost
 
-1. Over 10 plugins were removed indefinitely because they break GIMP 2.99.19 (pie divider, spheres, cutout, frame, text style collection (which contains dozens of plugins in one place), wood texture, align, video dedegradtion mod, bokeh, gum balls are gone.   
+1. Over 11 plugins were removed indefinitely because they break GIMP 2.99.19 (pie divider, spheres, cutout, frame, text style collection (which contains dozens of plugins in one place), wood texture, align, video dedegradtion mod, bokeh, gum balls, and glas tiles are gone.   
 2. All plugins that use image uploads had their image upload ability removed
 3. GEGL Effects lost its gradient, shiny text and color blend mode picker
 4. Glow Stick lost its ability to call gegl:bloom
 5. Sparkle lost its dropshadow and had its graph rewritten
 6. Rock Text 2 had a domain smooth removed and replaced with mean-curvature-blur; a virtually unnoticable change but it had to happen because gegl:crop left.
+7. Clouds had its graph rewritten. There could be micro changes because of this that I don't know asbout. 
 
 ### A few technical new features/upgrades happened
 
