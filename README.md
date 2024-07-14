@@ -114,5 +114,21 @@ has the potential to crash GIMP 3 on closing a window or tab. The longterm goal 
 
 If you use GIMP 2.99.19/GIMP 3 and want to use my plugins everything you download should be here and you should not mix GIMP 2.10 plugins with these as if you do they will crash when closing a tab or GIMP.
 
+## List of GEGL plugins that are indefinitely broke in GIMP 2.99.19
+
+These are plugins I could not successfuly modify and they likely will not be fixed until GIMP's team does something. I put serious effort into fixing some of them and it just won't work, its too complicated.
+
+https://github.com/LinuxBeaver/Gimp_Plugin_Equal_Pie_Divider/
+https://github.com/LinuxBeaver/GEGL-Spheres---Render-Spheres-in-Gimp/
+https://github.com/LinuxBeaver/GEGL-CutOut-Effect/
+https://github.com/LinuxBeaver/Gimp-Text-Style-Collection-Plugin/
+https://github.com/LinuxBeaver/Basic-Frame-Gimp-Plugin/
+https://github.com/LinuxBeaver/Noise_in_Motion_Gimp_plugin/
+https://github.com/LinuxBeaver/Gimp_Align_Tool_Filter/
+https://github.com/LinuxBeaver/Fork-of-gegl-video-degradation/
+https://github.com/LinuxBeaver/GEGL-Bokeh
+https://github.com/LinuxBeaver/Gimp-Balls-and-Confetti-Plugin/releases/
+https://github.com/LinuxBeaver/Glass_Tiles_Gimp_Plugin
+
 
 # This bunker repo permanent solution for 2.99.18/GIMP 3 users unless GIMP's team fixes things. Until further notice GIMP 2.99/3 users should NOT use normal repos or the crash will happen. 
