@@ -107,6 +107,8 @@ GIMP 2.99.19/GIMP 3 RC1 is causing extreme problems with my normal plugin repos.
 3. **int** where **double** should be (or vice versa)
 4. Invalid parameters (ie emboss azimuth=361)
 5. Invalid meta tags (ie gegl sensitive without a checkbox)
+6. If most render filters are used without being inside the src-in blend mode
+7. If GIMP operations use sliders (like gimp:threshold-alpha) inside my plugins. GIMP ops can be called but they cannot be given sliders
 
 has the potential to crash GIMP 3 on closing a window or tab. The longterm goal is for GIMP's team to fix the crash (not me) and until GIMP's team fixes the problem this "GIMP 3 plugin bunker" is the only solution.  GIMP 2.10 and GIMP 3 plugins cannot co-exist anymore.  This is a special branch of all my plugins specifically meant for GIMP 2.99/GIMP 3 only. 
 
