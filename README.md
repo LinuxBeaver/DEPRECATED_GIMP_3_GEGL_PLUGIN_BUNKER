@@ -119,15 +119,25 @@ If you use GIMP 2.99.19/GIMP 3 and want to use my plugins everything you downloa
 These are plugins I could not successfuly modify and they likely will not be fixed until GIMP's team does something. I put serious effort into fixing some of them and it just won't work, its too complicated.
 
 https://github.com/LinuxBeaver/Gimp_Plugin_Equal_Pie_Divider/
+
 https://github.com/LinuxBeaver/GEGL-Spheres---Render-Spheres-in-Gimp/
+
 https://github.com/LinuxBeaver/GEGL-CutOut-Effect/
+
 https://github.com/LinuxBeaver/Gimp-Text-Style-Collection-Plugin/
+
 https://github.com/LinuxBeaver/Basic-Frame-Gimp-Plugin/
+
 https://github.com/LinuxBeaver/Noise_in_Motion_Gimp_plugin/
+
 https://github.com/LinuxBeaver/Gimp_Align_Tool_Filter/
+
 https://github.com/LinuxBeaver/Fork-of-gegl-video-degradation/
+
 https://github.com/LinuxBeaver/GEGL-Bokeh
+
 https://github.com/LinuxBeaver/Gimp-Balls-and-Confetti-Plugin/releases/
+
 https://github.com/LinuxBeaver/Glass_Tiles_Gimp_Plugin
 
 
