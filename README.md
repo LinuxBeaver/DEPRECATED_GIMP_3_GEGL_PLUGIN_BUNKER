@@ -136,7 +136,7 @@ https://github.com/LinuxBeaver/Fork-of-gegl-video-degradation/
 
 https://github.com/LinuxBeaver/GEGL-Bokeh
 
-https://github.com/LinuxBeaver/Gimp-Balls-and-Confetti-Plugin/releases/
+https://github.com/LinuxBeaver/Gimp-Balls-and-Confetti-Plugin/
 
 https://github.com/LinuxBeaver/Glass_Tiles_Gimp_Plugin
 
