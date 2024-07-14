@@ -85,7 +85,7 @@ ninja -C build
 4. Glow Stick lost its ability to call gegl:bloom
 5. Sparkle lost its dropshadow and had its graph rewritten
 6. Rock Text 2 had a domain smooth removed and replaced with mean-curvature-blur; a virtually unnoticable change but it had to happen because gegl:crop left.
-7. Clouds had its graph rewritten. There could be micro changes because of this that I don't know asbout. 
+7. Clouds had its graph rewritten. There could be micro changes because of this that I don't know about, but it looks the same. 
 
 ### A few technical new features/upgrades happened
 
