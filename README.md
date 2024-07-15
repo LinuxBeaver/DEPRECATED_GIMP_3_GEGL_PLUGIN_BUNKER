@@ -1,6 +1,6 @@
 # GIMP 3 has serious problems with many of my plugins - this is the safe repo for GIMP 2.99/GIMP 3 users
 
-## 60 GEGL plugins of mine compatible with GIMP 2.99/3 
+## 52 GEGL plugins of mine compatible with GIMP 2.99/3 
 
 Source code and Linux and Windows binaries avalible - please remove everything from /gegl-0.4/plug-ins before using them or you will experience a crash on closing GIMP 2.99/3. 
 
@@ -79,7 +79,7 @@ ninja -C build
 
 ### Below is a list of what was lost
 
-1. Over 11 plugins were removed indefinitely because they break GIMP 2.99.19 (pie divider, spheres, cutout, frame, text style collection (which contains dozens of plugins in one place), wood texture, align, video dedegradtion mod, bokeh, gum balls, and glas tiles are gone.   
+1. Over 15 plugins were removed indefinitely because they break GIMP 2.99.19 (pie divider, spheres, cutout, frame, text style collection (which contains dozens of plugins in one place), wood texture, align, video dedegradtion mod, bokeh, gum balls, and glas tiles and more are gone.   
 2. All plugins that use image uploads had their image upload ability removed
 3. GEGL Effects lost its gradient, shiny text and color blend mode picker
 4. Glow Stick lost its ability to call gegl:bloom
@@ -137,9 +137,20 @@ https://github.com/LinuxBeaver/Fork-of-gegl-video-degradation/
 
 https://github.com/LinuxBeaver/GEGL-Bokeh
 
+https://github.com/LinuxBeaver/Skeleton_Text_Gimp_Plugin
+
 https://github.com/LinuxBeaver/Gimp-Balls-and-Confetti-Plugin/
 
 https://github.com/LinuxBeaver/Glass_Tiles_Gimp_Plugin
+
+https://github.com/LinuxBeaver/Gimp_Marble_Wallpaper_Plugin
+
+https://github.com/LinuxBeaver/GEGL_Polygons
+
+https://github.com/LinuxBeaver/Chipped_Rock_Volcanic_Text_Style_Gimp_Plugin/
+
+https://github.com/LinuxBeaver/Ocean-Surface---Gimp-background-design-plugin/
+
 
 
 # This bunker repo permanent solution for 2.99.18/GIMP 3 users unless GIMP's team fixes things. Until further notice GIMP 2.99/3 users should NOT use normal repos or the crash will happen. 
