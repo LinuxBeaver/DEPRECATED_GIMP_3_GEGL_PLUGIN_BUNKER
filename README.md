@@ -1,6 +1,6 @@
 # GIMP 3 has serious problems with many of my plugins - this is the safe repo for GIMP 2.99/GIMP 3 users
 
-## 54 GEGL plugins of mine compatible with GIMP 2.99/3 
+## 52 GEGL plugins of mine compatible with GIMP 2.99/3 
 
 
 
