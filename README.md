@@ -94,7 +94,7 @@ ninja -C build
 
 ### GEGL Effects is the only repo on my Github with a 2.99.19 branch
 
-In the future more individual repos may appear...
+This is only due to popularity - Hopefully in the future this will be fixed as I do not want more 2.99.19/ GIMP 3 repos to appear.
 
 https://github.com/LinuxBeaver/Gimp_Layer_Effects_Text_Styler_Plugin_GEGL_Effects/tree/Continual_299_19_crash_proof
    
