@@ -1,3 +1,7 @@
+The bunker repo for GIMP 3 may be deprecated as of august 28 2024 it appears this fix makes it where users can now use normal repos
+
+http://gimpchat.com/viewtopic.php?f=7&t=20876&p=291276#p291276
+
 # GIMP 3 has serious problems with many of my plugins - this is the safe repo for GIMP 2.99/GIMP 3 users
 
 ## 52 GEGL plugins of mine compatible with GIMP 2.99/3 
