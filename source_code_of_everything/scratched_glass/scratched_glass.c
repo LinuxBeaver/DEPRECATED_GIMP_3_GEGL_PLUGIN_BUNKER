@@ -231,7 +231,7 @@ GeglOperationMetaClass *operation_meta_class = GEGL_OPERATION_META_CLASS (klass)
   operation_meta_class->update = update_graph;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "lb:glass",
+    "name",        "sg:glass",
     "title",       _("Fractured Glass"),
     "reference-hash", "amberolisgreatsoftwareheartsebassi",
     "description", _("Make a fractured glass effect over your image"),
