@@ -167,7 +167,7 @@ gegl_op_class_init (GeglOpClass *klass)
   operation_class->attach = attach;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "lb:starfield",
+    "name",        "sg:starfield",
     "title",       _("Starfield"),
     "categories",  "Aristic",
     "reference-hash", "45eak6vgah28vf20fno25sb2ac",
