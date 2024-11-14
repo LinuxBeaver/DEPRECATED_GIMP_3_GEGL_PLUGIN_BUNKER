@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with GEGL; if not, see <https://www.gnu.org/licenses/>.
  *
- * 
+ * Copyright 2006 Øyvind Kolås <pippin@gimp.org>
  * 2022 Beaver Starburst
  */
 
@@ -22,6 +22,7 @@ June 25 2023 - Recreation of GEGL Graph - not complete but good enough for testi
 
 id=1
 over aux=[ color value=#00ff48 ]
+crop
 mirrors m-angle=77 c-x=2 c-y=2
 id=2
 dst-over aux=[ ref=2 color value=#ffa700 ]
@@ -75,7 +76,7 @@ property_double (c_y, _("Vertical (Y) movement"), 0.5)
     ui_meta     ("unit", "relative-coordinate")
     ui_meta     ("axis", "y")
 
-property_int  (radius, _("Remove the 1 pixel line artifact"), 1)
+property_int  (radius, _("Remove the 1 pixel line artifact"), 2)
   value_range (0, 2)
   ui_range    (0, 2)
   ui_meta     ("unit", "pixel-distance")
@@ -97,27 +98,22 @@ static void attach (GeglOperation *operation)
   node    = gegl_node_new_child (gegl,
                                   "operation", "gegl:node",
                                   NULL);  */
-  GeglNode *input, *output, *over, *dt1, *id1, *id2, *mirrors, *dst, *col, *col2, *mb, *dt2;
+  GeglNode *input,  *output, *over, *cropfinal, *crop, *mirrors, *dst, *col, *col2, *mb, *cropx;
 
   input    = gegl_node_get_input_proxy (gegl, "input");
   output   = gegl_node_get_output_proxy (gegl, "output");
 
 
-  id1    = gegl_node_new_child (gegl,
-                                  "operation", "gegl:nop",
+  cropfinal    = gegl_node_new_child (gegl,
+                                  "operation", "gegl:crop",
                                   NULL);
 
-  id2    = gegl_node_new_child (gegl,
-                                  "operation", "gegl:nop",
+  crop    = gegl_node_new_child (gegl,
+                                  "operation", "gegl:crop",
                                   NULL);
 
-
-  dt1    = gegl_node_new_child (gegl,
-                                  "operation", "gegl:distance-transform", 
-                                  NULL);
-
-  dt2    = gegl_node_new_child (gegl,
-                                  "operation", "gegl:distance-transform", 
+  cropx    = gegl_node_new_child (gegl,
+                                  "operation", "gegl:crop",
                                   NULL);
 
 
@@ -137,11 +133,11 @@ static void attach (GeglOperation *operation)
                                   NULL);
 
   col    = gegl_node_new_child (gegl,
-                                  "operation", "gegl:color-overlay",
+                                  "operation", "gegl:color",
                                   NULL);
 
   col2    = gegl_node_new_child (gegl,
-                                  "operation", "gegl:color-overlay",
+                                  "operation", "gegl:color",
                                   NULL);
 
  mb    = gegl_node_new_child (gegl,
@@ -151,13 +147,13 @@ static void attach (GeglOperation *operation)
 /*GEGL Crop is used to solve a potential bug that gegl:color has. It is a good faith practice to put them after gegl:color or any render operation.*/
 
 /*This is a GEGL Graph of all the filters being called, normal blend mode, crop, kaleidoscope, behind blend mode, crop(again), median blur,*/
- gegl_node_link_many (input, id1, over,  mirrors, id2, dst,  mb, output, NULL);
+ gegl_node_link_many (input, over, crop, mirrors, dst, cropx, mb, cropfinal,  output, NULL);
 /*Over is the NORMAL blend mode. The first color fill is blended with this. */
  gegl_node_connect (over, "aux", col, "output");
- gegl_node_link_many (id1, dt1, col, NULL);
 /*DST is the behind blend mode. The second color fill is blended with this. */
  gegl_node_connect (dst, "aux", col2, "output");
- gegl_node_link_many (id2, dt2, col2, NULL);
+ gegl_node_connect (crop, "aux", input, "output");
+ gegl_node_connect (cropx, "aux", input, "output");
 
 
 /*The three parts after (operation, are "defined_GUI_options", defined_operation_name, "operation_property");
@@ -184,8 +180,9 @@ gegl_op_class_init (GeglOpClass *klass)
   operation_class->attach = attach;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "sg:starburst",
+    "name",        "lb:starburst",
     "title",       _("Starburst"),
+    "categories",  "Artistic",
     "reference-hash", "45ed16360128agbr25493xc254001b2ac",
     "description", _("Make a starburst using GEGL "
                      ""),
