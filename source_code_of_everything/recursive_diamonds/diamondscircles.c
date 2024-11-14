@@ -201,7 +201,7 @@ GeglOperationMetaClass *operation_meta_class = GEGL_OPERATION_META_CLASS (klass)
   operation_meta_class->update = update_graph;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "lb:recursive-dc",
+    "name",        "sg:recursive-dc",
     "title",       _("Recursive diamonds/circles"),
     "reference-hash", "hardworkingredhatengineer",
     "description", _("Render a background of recursive diamonds or circles"),
