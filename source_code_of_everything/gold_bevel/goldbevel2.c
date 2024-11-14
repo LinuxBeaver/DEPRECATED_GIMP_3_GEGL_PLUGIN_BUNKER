@@ -18,7 +18,7 @@
 
 You can test plugin without installing by pasting this syntax into Gimp's GEGL graph (requires plugins sharp bevel and metallic) that do ship with it.
 
-lb:sharpbevel bevelcolorpolicy=true color=#fc72fd bevelcontrol=0.5  blendmode=hardlight smooth=16 sharpen=1 depth=72 elevation=57 size=2
+sg:sharpbevel bevelcolorpolicy=true color=#fc72fd bevelcontrol=0.5  blendmode=hardlight smooth=16 sharpen=1 depth=72 elevation=57 size=2
 crop
 
 metallic
@@ -227,27 +227,27 @@ static void update_graph (GeglOperation *operation)
 
 
   state->sharpbevelhardlight = gegl_node_new_child (gegl,
-                                  "operation", "lb:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 0, "elevation", 35.0, "depth", 24,
+                                  "operation", "sg:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 0, "elevation", 35.0, "depth", 24,
                                   NULL);
 
   state->sharpbevelcolordodge = gegl_node_new_child (gegl,
-                                  "operation", "lb:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 2, "elevation", 35.0, "depth", 24,
+                                  "operation", "sg:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 2, "elevation", 35.0, "depth", 24,
                                   NULL);
 
   state->sharpbevelplus = gegl_node_new_child (gegl,
-                                  "operation", "lb:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 3, "elevation", 35.0, "depth", 24,
+                                  "operation", "sg:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 3, "elevation", 35.0, "depth", 24,
                                   NULL);
 
   state->sharpbeveldarken = gegl_node_new_child (gegl,
-                                  "operation", "lb:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 4, "elevation", 35.0, "depth", 24,
+                                  "operation", "sg:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 4, "elevation", 35.0, "depth", 24,
                                   NULL);
 
   state->sharpbevelsoftlight = gegl_node_new_child (gegl,
-                                  "operation", "lb:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 8, "elevation", 35.0, "depth", 24,
+                                  "operation", "sg:sharpbevel", "bevelcolorpolicy", TRUE, "color", bakedcolor, "bevelcontrol", 1.5, "blendmode", 8, "elevation", 35.0, "depth", 24,
                                   NULL);
 
   state->metallic = gegl_node_new_child (gegl,
-                                  "operation", "lb:metallic", "guichange", 1, "liquid", 0.3, "solar1", 5.2, "solar2", 5.6, "solar3", 2.1, "light", 0.0, "smooth", 2, "color", bakedcolor2,  "blend", 3,
+                                  "operation", "sg:metallic", "guichange", 1, "liquid", 0.3, "solar1", 5.2, "solar2", 5.6, "solar3", 2.1, "light", 0.0, "smooth", 2, "color", bakedcolor2,  "blend", 3,
                                   NULL);
 /*These, "sharp bevel and metallic" are plugins of mine that are useful on their own. Sharp bevel is listed five times each on a different blend mode (hardlight, colordodge, plus, darken, and softlight*/
 
@@ -310,7 +310,7 @@ default: sharpbevel = state->sharpbevelhardlight;
 /*Outside of one complex exception, this is actually a very simple GEGL graph. Noise and Opacity are inside a "normal" blend mode called "over", everything else is just basic nodes being listed. Remember though, sharpbevel and metallic are plugins of mine that contain complex node connections of their own within their respected .c files. Same goes for Gimp's native bloom filter. The reason noise is inside the over blend mode is so it can be made semi transparent or disabled
 by being made fully transparent and so filter `noise reduction` may run on it alone and not the rest of the graph. Think of the `over` blend mode as a container for other filters so there effects don't leak elsewhere. This is all simple GEGL stuff.
 
-The one complex exception is that the node 'sharpbevel' is set to switch to multiple copies of my node/filter (lb:sharpbevel) that are on different blend modes. This is a blend mode switching process. The user chooses what blend mode they want sharp bevel to be on. */
+The one complex exception is that the node 'sharpbevel' is set to switch to multiple copies of my node/filter (sg:sharpbevel) that are on different blend modes. This is a blend mode switching process. The user chooses what blend mode they want sharp bevel to be on. */
 
     gegl_operation_meta_redirect (operation, "solar1", state->metallic, "solar1");
     gegl_operation_meta_redirect (operation, "solar2", state->metallic, "solar2");
@@ -351,7 +351,7 @@ GeglOperationMetaClass *operation_meta_class = GEGL_OPERATION_META_CLASS (klass)
 operation_class->attach = attach;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "lb:goldbevel",
+    "name",        "sg:goldbevel",
     "title",       _("Gold Bevel"),
     "reference-hash", "falfgpirat345345egold",
     "description", _("A special filter that calls my existing filters Metallic and Sharp Bevel with other effects to create beveled gold text."),
