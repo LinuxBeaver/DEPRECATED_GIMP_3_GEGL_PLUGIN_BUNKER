@@ -227,7 +227,7 @@ GeglOperationMetaClass *operation_meta_class = GEGL_OPERATION_META_CLASS (klass)
   operation_meta_class->update = update_graph;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "lb:oceansurface-2",
+    "name",        "sg:oceansurface-2",
     "title",       _("Ocean surface 2"),
     "reference-hash", "xfceisbasedwithmuteplayerclassic",
     "description", _("Render an Ocean's surface background"),
