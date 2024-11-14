@@ -279,7 +279,7 @@ operation_class->attach = attach;
 
   gegl_operation_class_set_keys (operation_class,
 /*If this filter ever breaks try changing the name lb: to something else. This is because Gimp's team may want longer name spaces.*/
-    "name",        "lb:marble",
+    "name",        "sg:marble",
     "title",       _("Marble"),
     "reference-hash", "marn6tjblklmare33jmanbfjr",
     "description", _("Render Marble Wallpaper"),
