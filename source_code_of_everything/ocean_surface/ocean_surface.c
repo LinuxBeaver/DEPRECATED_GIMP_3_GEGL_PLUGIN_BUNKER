@@ -147,7 +147,7 @@ gegl_op_class_init (GeglOpClass *klass)
   operation_class->attach = attach;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "lb:oceansurface",
+    "name",        "sg:oceansurface",
     "title",       _("Ocean Surface"),
     "reference-hash", "32jfrrsarah3bonito3rocks34fjefefc",
     "gimp:menu-path", "<Image>/Filters/Render/Fun",
