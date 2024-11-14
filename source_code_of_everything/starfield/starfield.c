@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU Lesser General Public
  * License along with GEGL; if not, see <https://www.gnu.org/licenses/>.
  *
- * 
+ * Copyright 2006 Øyvind Kolås <pippin@gimp.org>
  * 2022 Beaver (GEGL starfield)
  */
 
@@ -39,7 +39,8 @@ softglow
 
 #ifdef GEGL_PROPERTIES
 
-
+#define TUTORIALG \
+" id=1 src  aux=[ ref=1 color ] crop "\
 /* This GEGL Graph allows it to apply on transparent surfaces. When this filter was first released in Summer 2022 it required an opaque background. */
 
 property_double (saturation_distance, _("Add background Stars and enhance color"), 0.035)
@@ -56,7 +57,7 @@ property_double (out_high, _("Make Stars Brighter"), 4.15)
     description (_("Highest luminance level in output"))
     ui_range    (3.95, 4.2)
 
-property_double (gamma, _("Size range of Stars"), 14.0)
+property_double (gamma, _("Size range of Stars"), 14)
    description(_("Slide up to only show large stars. Slide down to only show small stars"))
    ui_range (0, 40)
 
@@ -100,9 +101,6 @@ static void attach (GeglOperation *operation)
                                   "operation", "gegl:color-overlay",
                                    "value", starcolor, NULL);
        
-
-#define TUTORIALG \
-" id=1 src  aux=[ ref=1 distance-transform ]  "\
 
   graph = gegl_node_new_child (gegl,
                                   "operation", "gegl:gegl", "string", TUTORIALG,
@@ -169,8 +167,9 @@ gegl_op_class_init (GeglOpClass *klass)
   operation_class->attach = attach;
 
   gegl_operation_class_set_keys (operation_class,
-    "name",        "sg:starfield",
+    "name",        "lb:starfield",
     "title",       _("Starfield"),
+    "categories",  "Aristic",
     "reference-hash", "45eak6vgah28vf20fno25sb2ac",
     "description", _("Render a Starry Night with GEGL. "
                      ""),
